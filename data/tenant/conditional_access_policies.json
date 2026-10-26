@@ -1,0 +1,134 @@
+{
+  "value": [
+    {
+      "id": "ca822b9c-4b99-5650-8580-f439a74d49c1",
+      "displayName": "CA001 Require MFA for all users",
+      "state": "enabled",
+      "conditions": {
+        "users": {
+          "includeUsers": [
+            "All"
+          ],
+          "excludeUsers": [
+            "6c82f7a3-c673-5c6f-b436-dde1d7cf5f8d"
+          ],
+          "includeRoles": [],
+          "excludeRoles": []
+        },
+        "applications": {
+          "includeApplications": [
+            "All"
+          ]
+        },
+        "clientAppTypes": [
+          "all"
+        ]
+      },
+      "grantControls": {
+        "authenticationStrength": null,
+        "operator": "OR",
+        "builtInControls": [
+          "mfa"
+        ]
+      }
+    },
+    {
+      "id": "c9b7586b-7c98-514e-88fb-e7367c34fdb1",
+      "displayName": "CA002 Block legacy authentication",
+      "state": "enabledForReportingButNotEnforced",
+      "conditions": {
+        "users": {
+          "includeUsers": [
+            "All"
+          ],
+          "excludeUsers": [],
+          "includeRoles": [],
+          "excludeRoles": []
+        },
+        "applications": {
+          "includeApplications": [
+            "All"
+          ]
+        },
+        "clientAppTypes": [
+          "exchangeActiveSync",
+          "other"
+        ]
+      },
+      "grantControls": {
+        "authenticationStrength": null,
+        "operator": "OR",
+        "builtInControls": [
+          "block"
+        ]
+      }
+    },
+    {
+      "id": "f871e295-8a21-516a-9242-a8f3435c2959",
+      "displayName": "CA003 Phishing-resistant MFA for administrators",
+      "state": "enabled",
+      "conditions": {
+        "users": {
+          "includeUsers": [],
+          "excludeUsers": [
+            "6c82f7a3-c673-5c6f-b436-dde1d7cf5f8d"
+          ],
+          "includeRoles": [
+            "62e90394-69f5-4237-9190-012177145e10",
+            "e8611ab8-c189-46e8-94e1-60213ab1f814",
+            "194ae4cb-b126-40b2-bd5b-6091b380977d",
+            "29232cdf-9323-42fd-ade2-1d097af3e4de",
+            "fe930be7-5e62-47db-91af-98c3a49a38b1"
+          ],
+          "excludeRoles": []
+        },
+        "applications": {
+          "includeApplications": [
+            "All"
+          ]
+        },
+        "clientAppTypes": [
+          "all"
+        ]
+      },
+      "grantControls": {
+        "authenticationStrength": {
+          "id": "00000000-0000-0000-0000-000000000004",
+          "displayName": "Phishing-resistant MFA"
+        },
+        "operator": "OR",
+        "builtInControls": []
+      }
+    },
+    {
+      "id": "60ff5390-cf07-529e-847b-502bca5584fd",
+      "displayName": "CA004 Require compliant device for Exchange Online",
+      "state": "disabled",
+      "conditions": {
+        "users": {
+          "includeUsers": [
+            "All"
+          ],
+          "excludeUsers": [],
+          "includeRoles": [],
+          "excludeRoles": []
+        },
+        "applications": {
+          "includeApplications": [
+            "All"
+          ]
+        },
+        "clientAppTypes": [
+          "all"
+        ]
+      },
+      "grantControls": {
+        "authenticationStrength": null,
+        "operator": "OR",
+        "builtInControls": [
+          "compliantDevice"
+        ]
+      }
+    }
+  ]
+}

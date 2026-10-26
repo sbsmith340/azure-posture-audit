@@ -1,0 +1,44 @@
+{
+  "value": [
+    {
+      "id": "43991e78-c6ad-5542-b034-8bbfe01dbf68",
+      "principalDisplayName": "Field Inspection Sync",
+      "principalId": "f1b3a9e1-0d9f-51ab-a0e8-17faad9b36ae",
+      "appId": "f1184b39-de01-5019-a797-5105f077fb18",
+      "resourceDisplayName": "Microsoft Graph",
+      "appRoleId": "df021288-bdef-4463-88db-98f22de89214"
+    },
+    {
+      "id": "dd09ce90-d782-56ff-8a31-075cb4da826c",
+      "principalDisplayName": "Legacy Mail Relay",
+      "principalId": "53a7e947-438e-5fae-8500-b5c57d65a8b5",
+      "appId": "2f1f6383-d7f6-52ca-ae88-a8dde693dbd9",
+      "resourceDisplayName": "Microsoft Graph",
+      "appRoleId": "e2a3a72e-5f79-4c64-b1b1-878b674786c9"
+    },
+    {
+      "id": "ad936044-804a-5fdd-83ef-255271ad026f",
+      "principalDisplayName": "Legacy Mail Relay",
+      "principalId": "53a7e947-438e-5fae-8500-b5c57d65a8b5",
+      "appId": "2f1f6383-d7f6-52ca-ae88-a8dde693dbd9",
+      "resourceDisplayName": "Microsoft Graph",
+      "appRoleId": "b633e1c5-b582-4048-a93e-9f11b44c7e96"
+    },
+    {
+      "id": "f810eafc-a86a-5b85-937e-d804cfb02a15",
+      "principalDisplayName": "HR Directory Connector",
+      "principalId": "70112a2e-d713-5388-a91e-0bd88217cfc7",
+      "appId": "987260f8-cfd8-5d0f-aaa7-2c689db11f11",
+      "resourceDisplayName": "Microsoft Graph",
+      "appRoleId": "19dbc75e-c2e2-444c-a770-ec69d8559fc7"
+    },
+    {
+      "id": "58f2d98d-bc61-5bf0-bf6f-e9920438cfe8",
+      "principalDisplayName": "Reporting Dashboard",
+      "principalId": "43e853cd-1455-565b-98bf-bebabd7e30b3",
+      "appId": "8347e293-c479-5b5f-be57-cf38932745d7",
+      "resourceDisplayName": "Microsoft Graph",
+      "appRoleId": "810c84a8-4a9e-49e6-bf7d-12d183f40d01"
+    }
+  ]
+}

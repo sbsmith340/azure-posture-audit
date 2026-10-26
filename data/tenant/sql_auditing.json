@@ -1,0 +1,10 @@
+[
+  {
+    "server": "sql-fip-prod",
+    "state": "Enabled"
+  },
+  {
+    "server": "sql-reporting",
+    "state": "Enabled"
+  }
+]

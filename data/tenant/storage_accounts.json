@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Storage/storageAccounts/stfieldphotos01",
+      "name": "stfieldphotos01",
+      "type": "microsoft.storage/storageaccounts",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "allowBlobPublicAccess": false,
+        "minimumTlsVersion": "TLS1_2",
+        "supportsHttpsTrafficOnly": true,
+        "allowSharedKeyAccess": false,
+        "publicNetworkAccess": "Disabled"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Storage/storageAccounts/stpublicforms01",
+      "name": "stpublicforms01",
+      "type": "microsoft.storage/storageaccounts",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "allowBlobPublicAccess": true,
+        "minimumTlsVersion": "TLS1_2",
+        "supportsHttpsTrafficOnly": true,
+        "allowSharedKeyAccess": false,
+        "publicNetworkAccess": "Enabled"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Storage/storageAccounts/stexport01",
+      "name": "stexport01",
+      "type": "microsoft.storage/storageaccounts",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "allowBlobPublicAccess": false,
+        "minimumTlsVersion": "TLS1_2",
+        "supportsHttpsTrafficOnly": true,
+        "allowSharedKeyAccess": false,
+        "publicNetworkAccess": "Disabled"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Storage/storageAccounts/stauditlogs01",
+      "name": "stauditlogs01",
+      "type": "microsoft.storage/storageaccounts",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "allowBlobPublicAccess": false,
+        "minimumTlsVersion": "TLS1_2",
+        "supportsHttpsTrafficOnly": true,
+        "allowSharedKeyAccess": false,
+        "publicNetworkAccess": "Disabled"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-security/providers/Microsoft.KeyVault/vaults/kv-fip-prod",
+      "name": "kv-fip-prod",
+      "type": "microsoft.keyvault/vaults",
+      "resourceGroup": "rg-fip-security",
+      "location": "eastus2",
+      "properties": {
+        "enableSoftDelete": true,
+        "enablePurgeProtection": true,
+        "publicNetworkAccess": "Disabled"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-security/providers/Microsoft.KeyVault/vaults/kv-fip-dev",
+      "name": "kv-fip-dev",
+      "type": "microsoft.keyvault/vaults",
+      "resourceGroup": "rg-fip-security",
+      "location": "eastus2",
+      "properties": {
+        "enableSoftDelete": true,
+        "enablePurgeProtection": true,
+        "publicNetworkAccess": "Disabled"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-security/providers/Microsoft.KeyVault/vaults/kv-automation",
+      "name": "kv-automation",
+      "type": "microsoft.keyvault/vaults",
+      "resourceGroup": "rg-fip-security",
+      "location": "eastus2",
+      "properties": {
+        "enableSoftDelete": true,
+        "enablePurgeProtection": true,
+        "publicNetworkAccess": "Disabled"
+      }
+    }
+  ]
+}

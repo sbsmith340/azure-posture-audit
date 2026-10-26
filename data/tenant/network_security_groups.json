@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-network/providers/Microsoft.Network/networkSecurityGroups/nsg-web",
+      "name": "nsg-web",
+      "type": "microsoft.network/networksecuritygroups",
+      "resourceGroup": "rg-fip-network",
+      "location": "eastus2",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "AllowHttpsInbound",
+            "properties": {
+              "direction": "Inbound",
+              "access": "Allow",
+              "sourceAddressPrefix": "Internet",
+              "destinationPortRange": "443",
+              "destinationPortRanges": [],
+              "protocol": "Tcp",
+              "priority": 100
+            }
+          },
+          {
+            "name": "AllowSshFromBastion",
+            "properties": {
+              "direction": "Inbound",
+              "access": "Allow",
+              "sourceAddressPrefix": "10.20.0.0/27",
+              "destinationPortRange": "22",
+              "destinationPortRanges": [],
+              "protocol": "Tcp",
+              "priority": 110
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-network/providers/Microsoft.Network/networkSecurityGroups/nsg-jump",
+      "name": "nsg-jump",
+      "type": "microsoft.network/networksecuritygroups",
+      "resourceGroup": "rg-fip-network",
+      "location": "eastus2",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "AllowRdpAnywhere",
+            "properties": {
+              "direction": "Inbound",
+              "access": "Allow",
+              "sourceAddressPrefix": "*",
+              "destinationPortRange": "3389",
+              "destinationPortRanges": [],
+              "protocol": "Tcp",
+              "priority": 100
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-network/providers/Microsoft.Network/networkSecurityGroups/nsg-build",
+      "name": "nsg-build",
+      "type": "microsoft.network/networksecuritygroups",
+      "resourceGroup": "rg-fip-network",
+      "location": "eastus2",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "AllowMgmtPorts",
+            "properties": {
+              "direction": "Inbound",
+              "access": "Allow",
+              "sourceAddressPrefix": "0.0.0.0/0",
+              "destinationPortRange": "",
+              "destinationPortRanges": [
+                "22",
+                "8080-8090"
+              ],
+              "protocol": "Tcp",
+              "priority": 100
+            }
+          },
+          {
+            "name": "DenyAllInbound",
+            "properties": {
+              "direction": "Inbound",
+              "access": "Deny",
+              "sourceAddressPrefix": "*",
+              "destinationPortRange": "*",
+              "destinationPortRanges": [],
+              "protocol": "Tcp",
+              "priority": 110
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

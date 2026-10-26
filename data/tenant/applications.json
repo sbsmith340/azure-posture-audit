@@ -1,0 +1,118 @@
+{
+  "value": [
+    {
+      "id": "f0d84ec7-7abb-57f3-9bf8-d202a66fbe90",
+      "appId": "f1184b39-de01-5019-a797-5105f077fb18",
+      "displayName": "Field Inspection Sync",
+      "passwordCredentials": [
+        {
+          "keyId": "3f76d60d-af7e-5c22-8fd1-e562ce625eb1",
+          "displayName": "client secret",
+          "startDateTime": "2026-03-01T00:00:00Z",
+          "endDateTime": "2027-03-01T00:00:00Z"
+        }
+      ],
+      "requiredResourceAccess": [
+        {
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "df021288-bdef-4463-88db-98f22de89214",
+              "type": "Role"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "274f6ca8-a77c-5bfd-9ae6-594a5332b07a",
+      "appId": "2f1f6383-d7f6-52ca-ae88-a8dde693dbd9",
+      "displayName": "Legacy Mail Relay",
+      "passwordCredentials": [
+        {
+          "keyId": "d06eb7b0-eec3-5dae-a9df-d313c1de44c3",
+          "displayName": "client secret",
+          "startDateTime": "2024-06-01T00:00:00Z",
+          "endDateTime": "2026-11-15T00:00:00Z"
+        }
+      ],
+      "requiredResourceAccess": [
+        {
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "e2a3a72e-5f79-4c64-b1b1-878b674786c9",
+              "type": "Role"
+            },
+            {
+              "id": "b633e1c5-b582-4048-a93e-9f11b44c7e96",
+              "type": "Role"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5cc2e154-c2d3-535d-9168-6b82e77ac9ab",
+      "appId": "987260f8-cfd8-5d0f-aaa7-2c689db11f11",
+      "displayName": "HR Directory Connector",
+      "passwordCredentials": [
+        {
+          "keyId": "9b47591c-1605-5888-a511-17f65d556248",
+          "displayName": "client secret",
+          "startDateTime": "2026-01-10T00:00:00Z",
+          "endDateTime": "2027-01-10T00:00:00Z"
+        }
+      ],
+      "requiredResourceAccess": [
+        {
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "19dbc75e-c2e2-444c-a770-ec69d8559fc7",
+              "type": "Role"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "264e47e0-94e2-55bd-864d-6bc047653b77",
+      "appId": "8347e293-c479-5b5f-be57-cf38932745d7",
+      "displayName": "Reporting Dashboard",
+      "passwordCredentials": [
+        {
+          "keyId": "b639eff7-1659-55c2-a6c1-929069702062",
+          "displayName": "client secret",
+          "startDateTime": "2026-04-01T00:00:00Z",
+          "endDateTime": "2027-04-01T00:00:00Z"
+        }
+      ],
+      "requiredResourceAccess": [
+        {
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "810c84a8-4a9e-49e6-bf7d-12d183f40d01",
+              "type": "Role"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2236f26f-5350-5a8b-a25a-396c0cf4e215",
+      "appId": "842d8a26-f814-5aca-9249-b97d4920ff30",
+      "displayName": "Automation Runner",
+      "passwordCredentials": [
+        {
+          "keyId": "c49c5b3f-960e-5cd2-8753-550d520bf925",
+          "displayName": "client secret",
+          "startDateTime": "2026-07-01T00:00:00Z",
+          "endDateTime": "2027-01-01T00:00:00Z"
+        }
+      ],
+      "requiredResourceAccess": []
+    }
+  ]
+}

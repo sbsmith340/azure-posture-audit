@@ -1,0 +1,148 @@
+{
+  "value": [
+    {
+      "id": "6453aaf8-1db7-522d-9c08-204a5eaae0ec",
+      "userPrincipalName": "maria.lopez@contosofield.example",
+      "displayName": "maria.lopez",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-30T14:02:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-30T14:02:00Z"
+      }
+    },
+    {
+      "id": "1f722ec9-e2fe-5cac-a59f-64d1c2d3293f",
+      "userPrincipalName": "dev.patel@contosofield.example",
+      "displayName": "dev.patel",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-29T09:15:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-29T09:15:00Z"
+      }
+    },
+    {
+      "id": "6c82f7a3-c673-5c6f-b436-dde1d7cf5f8d",
+      "userPrincipalName": "break-glass-01@contosofield.example",
+      "displayName": "break-glass-01",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-08-15T10:00:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-08-15T10:00:00Z"
+      }
+    },
+    {
+      "id": "cb682d7c-7c36-5cba-b8d0-dd21c6cfdfd7",
+      "userPrincipalName": "tom.becker@contosofield.example",
+      "displayName": "tom.becker",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-28T16:40:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-28T16:40:00Z"
+      }
+    },
+    {
+      "id": "0da741c2-e99a-58c0-97c0-d4324c04911c",
+      "userPrincipalName": "aisha.khan@contosofield.example",
+      "displayName": "aisha.khan",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-30T08:05:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-30T08:05:00Z"
+      }
+    },
+    {
+      "id": "f3a2cb23-8b8a-5300-9922-a938b4bcb56a",
+      "userPrincipalName": "old.admin@contosofield.example",
+      "displayName": "old.admin",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-03-02T11:20:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-03-02T11:20:00Z"
+      }
+    },
+    {
+      "id": "b2e0d97c-00b9-56db-be80-413317d7fe93",
+      "userPrincipalName": "jenna.ortiz@contosofield.example",
+      "displayName": "jenna.ortiz",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-27T13:00:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-27T13:00:00Z"
+      }
+    },
+    {
+      "id": "d8214d55-4bfd-5bed-a991-994c68e16aae",
+      "userPrincipalName": "sam.reed@contosofield.example",
+      "displayName": "sam.reed",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-05-10T07:45:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-05-10T07:45:00Z"
+      }
+    },
+    {
+      "id": "c70aa3a3-1c04-5ab7-b54f-88b99d06d980",
+      "userPrincipalName": "former.contractor@contosofield.example",
+      "displayName": "former.contractor",
+      "accountEnabled": false,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-01-12T09:00:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-01-12T09:00:00Z"
+      }
+    },
+    {
+      "id": "f6195bb8-0120-50d3-991b-9fd54d122cef",
+      "userPrincipalName": "svc-scanner@contosofield.example",
+      "displayName": "svc-scanner",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": null,
+        "lastNonInteractiveSignInDateTime": null
+      }
+    },
+    {
+      "id": "a28c3f37-9546-59e0-b95f-e66a6aee097a",
+      "userPrincipalName": "partner.auditor_fabrikam.example#EXT#@contosofield.example",
+      "displayName": "partner.auditor",
+      "accountEnabled": true,
+      "userType": "Guest",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-20T15:30:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-20T15:30:00Z"
+      }
+    },
+    {
+      "id": "35fc7f8b-2ae9-536c-b3bf-05a618f08f76",
+      "userPrincipalName": "kim.nguyen@contosofield.example",
+      "displayName": "kim.nguyen",
+      "accountEnabled": true,
+      "userType": "Member",
+      "createdDateTime": "2024-02-01T00:00:00Z",
+      "signInActivity": {
+        "lastSignInDateTime": "2026-09-30T17:10:00Z",
+        "lastNonInteractiveSignInDateTime": "2026-09-30T17:10:00Z"
+      }
+    }
+  ]
+}

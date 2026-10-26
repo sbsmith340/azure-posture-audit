@@ -1,0 +1,55 @@
+{
+  "appId": "00000003-0000-0000-c000-000000000000",
+  "displayName": "Microsoft Graph",
+  "appRoles": [
+    {
+      "id": "19dbc75e-c2e2-444c-a770-ec69d8559fc7",
+      "value": "Directory.ReadWrite.All",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "e2a3a72e-5f79-4c64-b1b1-878b674786c9",
+      "value": "Mail.ReadWrite",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "b633e1c5-b582-4048-a93e-9f11b44c7e96",
+      "value": "Mail.Send",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "810c84a8-4a9e-49e6-bf7d-12d183f40d01",
+      "value": "Mail.Read",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "9e3f62cf-ca93-4989-b6ce-bf83c28f9fe8",
+      "value": "RoleManagement.ReadWrite.Directory",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "df021288-bdef-4463-88db-98f22de89214",
+      "value": "User.Read.All",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    },
+    {
+      "id": "1bfefb4e-e0b5-418b-a88f-73c46d2cc8e9",
+      "value": "Application.ReadWrite.All",
+      "allowedMemberTypes": [
+        "Application"
+      ]
+    }
+  ]
+}

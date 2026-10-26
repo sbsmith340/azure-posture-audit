@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Sql/servers/sql-fip-prod",
+      "name": "sql-fip-prod",
+      "type": "microsoft.sql/servers",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "publicNetworkAccess": "Disabled",
+        "minimalTlsVersion": "1.2"
+      }
+    },
+    {
+      "id": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-data/providers/Microsoft.Sql/servers/sql-reporting",
+      "name": "sql-reporting",
+      "type": "microsoft.sql/servers",
+      "resourceGroup": "rg-fip-data",
+      "location": "eastus2",
+      "properties": {
+        "publicNetworkAccess": "Disabled",
+        "minimalTlsVersion": "1.2"
+      }
+    }
+  ]
+}

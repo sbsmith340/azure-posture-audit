@@ -1,0 +1,28 @@
+{
+  "value": [
+    {
+      "id": "fc80078b-8ba0-5b6b-acfb-9179cc708fc7",
+      "principalId": "1f722ec9-e2fe-5cac-a59f-64d1c2d3293f",
+      "roleDefinitionId": "e8611ab8-c189-46e8-94e1-60213ab1f814",
+      "directoryScopeId": "/",
+      "memberType": "Direct",
+      "status": "Provisioned"
+    },
+    {
+      "id": "b4ebaa49-f788-5c7b-8be2-d633835fbb20",
+      "principalId": "b2e0d97c-00b9-56db-be80-413317d7fe93",
+      "roleDefinitionId": "194ae4cb-b126-40b2-bd5b-6091b380977d",
+      "directoryScopeId": "/",
+      "memberType": "Direct",
+      "status": "Provisioned"
+    },
+    {
+      "id": "b1cb3b85-3fa6-516d-8e95-8eb2f00c8d9a",
+      "principalId": "35fc7f8b-2ae9-536c-b3bf-05a618f08f76",
+      "roleDefinitionId": "fe930be7-5e62-47db-91af-98c3a49a38b1",
+      "directoryScopeId": "/",
+      "memberType": "Direct",
+      "status": "Provisioned"
+    }
+  ]
+}

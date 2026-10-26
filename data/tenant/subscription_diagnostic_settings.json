@@ -1,0 +1,19 @@
+{
+  "value": [
+    {
+      "name": "to-sentinel",
+      "storageAccountId": null,
+      "workspaceId": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1/resourceGroups/rg-fip-security/providers/Microsoft.OperationalInsights/workspaces/law-fip-sentinel",
+      "logs": [
+        {
+          "category": "Administrative",
+          "enabled": true
+        },
+        {
+          "category": "Security",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

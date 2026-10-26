@@ -1,0 +1,9 @@
+{
+  "id": "authorizationPolicy",
+  "defaultUserRolePermissions": {
+    "allowedToCreateApps": true,
+    "permissionGrantPoliciesAssigned": [
+      "ManagePermissionGrantsForSelf.microsoft-user-default-legacy"
+    ]
+  }
+}

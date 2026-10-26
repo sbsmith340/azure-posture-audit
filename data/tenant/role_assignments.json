@@ -1,0 +1,40 @@
+{
+  "value": [
+    {
+      "id": "e0414bc0-dea3-5fe0-9089-07cfac276c96",
+      "principalId": "6453aaf8-1db7-522d-9c08-204a5eaae0ec",
+      "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+      "directoryScopeId": "/"
+    },
+    {
+      "id": "fc51dfa2-fb52-54a6-8e33-b86105e37386",
+      "principalId": "6c82f7a3-c673-5c6f-b436-dde1d7cf5f8d",
+      "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+      "directoryScopeId": "/"
+    },
+    {
+      "id": "e92b96d5-31bf-533c-9921-93df6eea45bf",
+      "principalId": "cb682d7c-7c36-5cba-b8d0-dd21c6cfdfd7",
+      "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+      "directoryScopeId": "/"
+    },
+    {
+      "id": "d2dd4bdb-7687-579f-a55b-e0c3d77dda10",
+      "principalId": "f3a2cb23-8b8a-5300-9922-a938b4bcb56a",
+      "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+      "directoryScopeId": "/"
+    },
+    {
+      "id": "e7e9b2c7-34e8-5c9d-8fae-1f3b5e1acc47",
+      "principalId": "0da741c2-e99a-58c0-97c0-d4324c04911c",
+      "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+      "directoryScopeId": "/"
+    },
+    {
+      "id": "93e1b521-0629-51ef-b2e7-cca8dd6c79ae",
+      "principalId": "a28c3f37-9546-59e0-b95f-e66a6aee097a",
+      "roleDefinitionId": "29232cdf-9323-42fd-ade2-1d097af3e4de",
+      "directoryScopeId": "/"
+    }
+  ]
+}

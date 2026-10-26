@@ -1,0 +1,28 @@
+{
+  "value": [
+    {
+      "name": "VirtualMachines",
+      "pricingTier": "Standard"
+    },
+    {
+      "name": "SqlServers",
+      "pricingTier": "Standard"
+    },
+    {
+      "name": "StorageAccounts",
+      "pricingTier": "Free"
+    },
+    {
+      "name": "KeyVaults",
+      "pricingTier": "Standard"
+    },
+    {
+      "name": "Arm",
+      "pricingTier": "Standard"
+    },
+    {
+      "name": "Containers",
+      "pricingTier": "Free"
+    }
+  ]
+}
