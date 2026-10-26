@@ -1,0 +1,446 @@
+{
+  "tenant": {
+    "tenant": "Contoso Field Services (fictional)",
+    "domain": "contosofield.example",
+    "subscription": "/subscriptions/14ab763d-f1bd-5b15-8da4-6207839a53a1",
+    "collected_at": "2026-10-01T12:00:00Z",
+    "synthetic": true
+  },
+  "summary": {
+    "checks": 24,
+    "passed": 12,
+    "not_evaluated": 0,
+    "failed_high": 5,
+    "failed_moderate": 6,
+    "failed_low": 1,
+    "findings": 21,
+    "score_pct": 50.0
+  },
+  "results": [
+    {
+      "id": "IAM-01",
+      "title": "Conditional Access requires MFA for all users",
+      "severity": "High",
+      "controls": [
+        "IA-2(1)",
+        "IA-2(2)"
+      ],
+      "why": "Without a tenant-wide MFA policy, one phished password is a full account takeover.",
+      "fix": "Create an enabled Conditional Access policy for All users and All cloud apps that requires MFA (or an authentication strength); exclude only break-glass accounts.",
+      "evaluated": 1,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "IAM-02",
+      "title": "Legacy authentication is blocked",
+      "severity": "High",
+      "controls": [
+        "IA-2",
+        "AC-17"
+      ],
+      "why": "Legacy protocols (IMAP, POP, SMTP AUTH, older Office clients) cannot do MFA, so they bypass it.",
+      "fix": "Enable a Conditional Access policy for All users with client apps 'Exchange ActiveSync' and 'Other clients' and grant control 'Block'.",
+      "evaluated": 1,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "tenant",
+          "detail": "A legacy-auth block policy exists but is not enforced: 'CA002 Block legacy authentication' (enabledForReportingButNotEnforced)."
+        }
+      ]
+    },
+    {
+      "id": "IAM-03",
+      "title": "Administrators must use phishing-resistant MFA",
+      "severity": "Moderate",
+      "controls": [
+        "IA-2(1)",
+        "IA-2(8)"
+      ],
+      "why": "Push and code-based MFA can be relayed by adversary-in-the-middle phishing kits; FIDO2 and Windows Hello cannot.",
+      "fix": "Require the built-in 'Phishing-resistant MFA' authentication strength for privileged directory roles.",
+      "evaluated": 5,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "IAM-04",
+      "title": "No Conditional Access policies left in report-only or disabled",
+      "severity": "Low",
+      "controls": [
+        "CM-6"
+      ],
+      "why": "Report-only and disabled policies look like protection on a dashboard but enforce nothing.",
+      "fix": "Review sign-in impact in report-only mode, then switch the policy to On, or delete it.",
+      "evaluated": 4,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "CA002 Block legacy authentication",
+          "detail": "state is enabledForReportingButNotEnforced"
+        },
+        {
+          "resource": "CA004 Require compliant device for Exchange Online",
+          "detail": "state is disabled"
+        }
+      ]
+    },
+    {
+      "id": "IAM-05",
+      "title": "Between two and four Global Administrators",
+      "severity": "Moderate",
+      "controls": [
+        "AC-6(5)",
+        "AC-2(7)"
+      ],
+      "why": "Microsoft recommends fewer than five Global Administrators; more widens the blast radius of a compromise, and fewer than two risks lockout.",
+      "fix": "Move day-to-day admins to least-privileged roles and keep two break-glass Global Administrators.",
+      "evaluated": 1,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "tenant",
+          "detail": "5 permanent Global Administrators: aisha.khan@contosofield.example, break-glass-01@contosofield.example, maria.lopez@contosofield.example, old.admin@contosofield.example, tom.becker@contosofield.example."
+        }
+      ]
+    },
+    {
+      "id": "IAM-06",
+      "title": "Privileged roles are PIM-eligible, not permanent",
+      "severity": "Moderate",
+      "controls": [
+        "AC-2(7)",
+        "AC-6(5)"
+      ],
+      "why": "Standing admin rights are always available to an attacker; just-in-time activation limits the window.",
+      "fix": "Convert permanent privileged assignments to eligible assignments in Privileged Identity Management, keeping only break-glass accounts permanent.",
+      "evaluated": 9,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "maria.lopez@contosofield.example",
+          "detail": "permanent Global Administrator"
+        },
+        {
+          "resource": "tom.becker@contosofield.example",
+          "detail": "permanent Global Administrator"
+        },
+        {
+          "resource": "old.admin@contosofield.example",
+          "detail": "permanent Global Administrator"
+        },
+        {
+          "resource": "aisha.khan@contosofield.example",
+          "detail": "permanent Global Administrator"
+        },
+        {
+          "resource": "partner.auditor_fabrikam.example#EXT#@contosofield.example",
+          "detail": "permanent Exchange Administrator"
+        }
+      ]
+    },
+    {
+      "id": "IAM-07",
+      "title": "Every privileged user has MFA registered",
+      "severity": "High",
+      "controls": [
+        "IA-2(1)"
+      ],
+      "why": "A privileged account with no MFA method can be registered by whoever signs in first, including an attacker.",
+      "fix": "Require MFA registration for the account now, and block sign-in until it is done.",
+      "evaluated": 9,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "IAM-08",
+      "title": "No enabled accounts inactive for 90 days",
+      "severity": "Moderate",
+      "controls": [
+        "AC-2(3)"
+      ],
+      "why": "Unused accounts are rarely monitored, so they are a common foothold.",
+      "fix": "Disable accounts with no sign-in for 90 days after confirming with the owner; review service accounts separately.",
+      "evaluated": 11,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "old.admin@contosofield.example",
+          "detail": "last sign-in 2026-03-02 (213 days)"
+        },
+        {
+          "resource": "sam.reed@contosofield.example",
+          "detail": "last sign-in 2026-05-10 (144 days)"
+        },
+        {
+          "resource": "svc-scanner@contosofield.example",
+          "detail": "enabled and has never signed in"
+        }
+      ]
+    },
+    {
+      "id": "IAM-09",
+      "title": "No guest accounts hold privileged roles",
+      "severity": "High",
+      "controls": [
+        "AC-6(5)",
+        "AC-2"
+      ],
+      "why": "Guests are governed by another organization's identity controls and offboarding.",
+      "fix": "Remove the role, or give the person a member account governed by your own policies.",
+      "evaluated": 9,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "partner.auditor_fabrikam.example#EXT#@contosofield.example",
+          "detail": "guest holds Exchange Administrator"
+        }
+      ]
+    },
+    {
+      "id": "IAM-10",
+      "title": "Users cannot consent to applications on their own",
+      "severity": "Moderate",
+      "controls": [
+        "CM-11",
+        "AC-6"
+      ],
+      "why": "Illicit consent grants give an attacker's app persistent mailbox or file access that survives a password reset.",
+      "fix": "Set user consent to 'Do not allow' (or verified publishers with low-risk permissions only) and turn on the admin consent workflow.",
+      "evaluated": 1,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "tenant",
+          "detail": "user consent policy: ManagePermissionGrantsForSelf.microsoft-user-default-legacy"
+        }
+      ]
+    },
+    {
+      "id": "APP-01",
+      "title": "No app secrets expired or expiring within 30 days",
+      "severity": "Low",
+      "controls": [
+        "IA-5"
+      ],
+      "why": "Expired secrets break integrations; expiring ones get rotated in a hurry.",
+      "fix": "Rotate the secret, or better, move the app to a certificate or managed identity.",
+      "evaluated": 5,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "APP-02",
+      "title": "App secrets are valid for no more than 365 days",
+      "severity": "Moderate",
+      "controls": [
+        "IA-5"
+      ],
+      "why": "Long-lived secrets are the ones that end up in scripts and repositories.",
+      "fix": "Issue secrets for 12 months or less, or replace them with certificates or managed identities.",
+      "evaluated": 5,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "Legacy Mail Relay",
+          "detail": "secret lifetime 897 days"
+        }
+      ]
+    },
+    {
+      "id": "APP-03",
+      "title": "No apps hold high-risk Microsoft Graph application permissions",
+      "severity": "High",
+      "controls": [
+        "AC-6",
+        "AC-6(5)"
+      ],
+      "why": "Application permissions act without a signed-in user; Directory.ReadWrite.All or Mail.ReadWrite on a compromised app is tenant-wide.",
+      "fix": "Replace with least-privilege or resource-scoped permissions (for mail, an Exchange application access policy or RBAC for Applications), and review owners and credentials of apps that keep them.",
+      "evaluated": 4,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "HR Directory Connector",
+          "detail": "granted Directory.ReadWrite.All"
+        },
+        {
+          "resource": "Legacy Mail Relay",
+          "detail": "granted Mail.ReadWrite, Mail.Send"
+        }
+      ]
+    },
+    {
+      "id": "NET-01",
+      "title": "No SSH or RDP open to the internet",
+      "severity": "High",
+      "controls": [
+        "SC-7",
+        "AC-17"
+      ],
+      "why": "Internet-exposed management ports are brute-forced within minutes of exposure.",
+      "fix": "Remove the rule and use Azure Bastion or just-in-time VM access; if a rule must stay, restrict the source.",
+      "evaluated": 3,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "nsg-jump",
+          "detail": "rule 'AllowRdpAnywhere' allows RDP from *"
+        },
+        {
+          "resource": "nsg-build",
+          "detail": "rule 'AllowMgmtPorts' allows SSH from 0.0.0.0/0"
+        }
+      ]
+    },
+    {
+      "id": "STG-01",
+      "title": "Storage accounts block anonymous blob access",
+      "severity": "High",
+      "controls": [
+        "AC-3",
+        "SC-7"
+      ],
+      "why": "Anonymous access exposes any container someone later marks public.",
+      "fix": "Set allowBlobPublicAccess to false on the account.",
+      "evaluated": 4,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "stpublicforms01",
+          "detail": "allowBlobPublicAccess is enabled"
+        }
+      ]
+    },
+    {
+      "id": "STG-02",
+      "title": "Storage accounts require TLS 1.2 or later",
+      "severity": "Moderate",
+      "controls": [
+        "SC-8",
+        "SC-13"
+      ],
+      "why": "TLS 1.0 and 1.1 are deprecated and have known weaknesses.",
+      "fix": "Set minimumTlsVersion to TLS1_2.",
+      "evaluated": 4,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "STG-03",
+      "title": "Storage accounts accept HTTPS only",
+      "severity": "Moderate",
+      "controls": [
+        "SC-8"
+      ],
+      "why": "Plain HTTP exposes data and shared access signatures in transit.",
+      "fix": "Set supportsHttpsTrafficOnly to true.",
+      "evaluated": 4,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "STG-04",
+      "title": "Storage accounts disable shared key authorization",
+      "severity": "Low",
+      "controls": [
+        "AC-3",
+        "IA-2"
+      ],
+      "why": "Account keys grant full access and bypass Entra ID, Conditional Access, and per-user audit.",
+      "fix": "Move clients to Entra ID authorization, then set allowSharedKeyAccess to false.",
+      "evaluated": 4,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "KV-01",
+      "title": "Key vaults have purge protection",
+      "severity": "Moderate",
+      "controls": [
+        "SC-12",
+        "CP-9"
+      ],
+      "why": "Without purge protection, a deleted vault or key can be permanently destroyed during the retention window.",
+      "fix": "Enable purge protection (it cannot be turned off afterwards).",
+      "evaluated": 3,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "KV-02",
+      "title": "Key vaults are not reachable from public networks",
+      "severity": "Moderate",
+      "controls": [
+        "SC-7"
+      ],
+      "why": "Secrets should be reachable only from the networks that use them.",
+      "fix": "Disable public network access and use a private endpoint, or restrict the firewall to known networks.",
+      "evaluated": 3,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "SQL-01",
+      "title": "SQL servers are not reachable from public networks",
+      "severity": "Moderate",
+      "controls": [
+        "SC-7"
+      ],
+      "why": "Public endpoints expose the database login surface to the internet.",
+      "fix": "Disable public network access and connect through a private endpoint.",
+      "evaluated": 2,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "SQL-02",
+      "title": "SQL server auditing is enabled",
+      "severity": "Moderate",
+      "controls": [
+        "AU-2",
+        "AU-12"
+      ],
+      "why": "Without auditing there is no record of who queried or changed data.",
+      "fix": "Enable server-level auditing to a Log Analytics workspace.",
+      "evaluated": 2,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "LOG-01",
+      "title": "Subscription activity log is sent to Log Analytics",
+      "severity": "Moderate",
+      "controls": [
+        "AU-6",
+        "AU-12",
+        "SI-4"
+      ],
+      "why": "The activity log is kept for 90 days and can't be queried with other telemetry unless it is exported.",
+      "fix": "Add a subscription diagnostic setting that sends Administrative, Security and Policy logs to the Sentinel workspace.",
+      "evaluated": 1,
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "id": "DEF-01",
+      "title": "Defender for Cloud plans are on for core workloads",
+      "severity": "Moderate",
+      "controls": [
+        "SI-4",
+        "RA-5"
+      ],
+      "why": "The free tier gives posture recommendations only; threat detection needs the paid plan per resource type.",
+      "fix": "Enable the Standard tier for VirtualMachines, SqlServers, StorageAccounts, KeyVaults.",
+      "evaluated": 4,
+      "status": "FAIL",
+      "findings": [
+        {
+          "resource": "StorageAccounts",
+          "detail": "plan is Free"
+        }
+      ]
+    }
+  ]
+}
